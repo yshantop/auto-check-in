@@ -1,0 +1,13 @@
+# 日志文件
+*.log
+
+# 临时文件
+*.txt
+!requirements.txt
+
+# 图片文件
+*.jpg
+
+# Python 缓存文件
+__pycache__/
+*.pyc 
