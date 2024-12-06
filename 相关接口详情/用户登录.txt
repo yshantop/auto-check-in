@@ -1,0 +1,56 @@
+Headers:
+General:
+Request URL: http://sxsx.jxeduyun.com:7779/portal-api/login
+Request Method: POST
+Status Code: 200 OK
+Remote Address: 118.212.143.129:7779
+Referrer Policy: strict-origin-when-cross-origin
+
+Response Headers:
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-type: application/json;charset=UTF-8
+date: Fri, 06 Dec 2024 09:25:59 GMT
+expires: 0
+n-timestamp: 2024-12-06T17:25:59+08:00
+pragma: no-cache
+server: nginx/1.24.0
+transfer-encoding: chunked
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+
+Request Headers:
+accept: application/json, text/plain, */*
+accept-encoding: gzip, deflate
+accept-language: zh-CN,zh;q=0.9
+connection: keep-alive
+content-length: 325
+content-type: application/json;charset=UTF-8
+cookie: ecsLoginUrl=https%3A%2F%2Fbasic.jxeduyun.com%2Fzhjy-login%2F%23%2F
+host: sxsx.jxeduyun.com:7779
+origin: http://sxsx.jxeduyun.com:7779
+referer: http://sxsx.jxeduyun.com:7779/web/login?redirect=%2F%2Findex
+request-timestamp: 2024-12-06 17:25:58
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+
+Payload:
+Request Payload:
+{
+    "loginAccount": "36072520040601081X",
+    "password": "0495b598554f1e4b3a80ac3a671ac1dba0be4a8741a71f315e8de3bb77cd1031f0a0c8d553e7c985f0fcb09d627766378e2254692d8427f44d8f35b0516fa5028c3560e12f57d9b1a2bc2632a5ea0ffdd5a2f94246afc49d472d5296ff148518f9235d610b1693",
+    "rememberMe": true,
+    "loginUserType": "student",
+    "enrollmentYear": "2025"
+}
+
+
+Response:
+{
+    "msg": "操作成功",
+    "code": 200,
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2lkX2tleSI6IjdiZTYwYTU5NTFlYTQ4YThiZDUwNDMyMzhlMTU4ZDE1IiwibG9naW5fdXNlcl9rZXkiOiJiNzIwZWYyMy00ODk1LTQ1MmQtOGRkMy0yMTNmZWY4ZjgzYTgifQ.cBqAajQWJ-d3VMTLTin6HDI35gGtpEi3ZoyoMfJIFoMN0pJ-mJHXhbG8Hy5TLrnKYmSfBdUdpk1qSuf6T_opOA"
+}

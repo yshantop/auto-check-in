@@ -1,0 +1,31 @@
+name: Auto Sign
+
+on:
+  schedule:
+    - cron: '0 0,10 * * *'  # UTC 时间，对应北京时间 8:00 和 18:00
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          
+      - name: Install dependencies
+        run: |
+          pip install requests schedule
+          
+      - name: Create image file
+        run: |
+          echo "${{ secrets.SIGN_IMAGE }}" | base64 -d > img.jpg
+          
+      - name: Run sign script
+        env:
+          USERS_CONFIG: ${{ secrets.USERS_CONFIG }}
+        run: |
+          python auto_sign.py 

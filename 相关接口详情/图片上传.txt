@@ -1,0 +1,58 @@
+General
+Request URL:http://sxsx.jxeduyun.com:7779/portal-api/common/uploadFileUrl
+Request Method:POST
+Protocol:HTTP/1.1
+Status Code:200
+Remote Address:118.212.143.129:7779
+Request Time:2024-12-06 15:58:53.721
+Duration:634ms
+Request Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryH2xPG9tkLFqU24yw
+Response Content-Type:application/json
+Request Package:1.04M
+Response Package:0.74K
+
+
+Request
+Path:/portal-api/common/uploadFileUrl
+Request Headers
+Host : sxsx.jxeduyun.com:7779
+Connection: keep-alive
+Content-Length:1085722
+Accept: application/json, text/javascript, */*; q=0.01
+Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2lkX2tleSI6IjdiZTYwYTU5NTFlYTQ4YThiZDUwNDMyMzhlMTU4ZDE1IiwibG9naW5fdXNlcl9rZXkiOiJiYjI5NjEyMS01ZjU5LTQ1MzItYjBjOS04MTNhMzFiNjViZDkifQ.zbgnahrb0Rf8aMfzxmAAK4uqpf1V0Ng761dOiLttfL-0HESWAQFBO2Vodj45eHzK8sq-mQs1E0QejLK-YqI7fg
+User-Agent:Mozilla/5.0 (Linux; Android 14; 2407FRK8EC Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.71 Mobile Safari/537.36 uni-app Html5Plus/1.0 (Immersed/36.307693)
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryH2xPG9tkLFqU24yw
+X-Requested-With: com.ecom.renrentong
+Accept-Encoding : gzip, deflate
+Accept-Language : zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Response
+StatusCode:200
+Response Headers
+Server: nginx/1.24.0
+Date: Fri, 06 Dec 2024 07:58:54 GMT
+Content-Type: application/json
+Connection : keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control : no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires : 0
+N-Timestamp : 2024-12-06T15:58:54+08:00
+Content-Length: 293
+
+ResponseBody:
+{
+  "msg": "操作成功",
+  "fileName": "wx_camera_1733066177910.jpg",
+  "code": 200,
+  "fileSize": 1085521,
+  "name": "wx_camera_1733066177910.jpg",
+  "id": "142ad4d03b064c96af05a39630d95715",
+  "url": "/file/upload/2024/12/06/c7c40cee82e343e0a2a97586348b5ed6.jpg?fileName=wx_camera_1733066177910.jpg",
+  "fileType": "jpg"
+}

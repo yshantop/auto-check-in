@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "loginAccount": "36072520040601081X",
+            "password": "01081X",
+            "enrollmentYear": "2025"
+        },
+        {
+            "loginAccount": "362531200403285111",
+            "password": "285111",
+            "enrollmentYear": "2025"
+        }
+    ]
+} 

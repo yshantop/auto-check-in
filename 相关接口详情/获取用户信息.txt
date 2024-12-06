@@ -1,0 +1,128 @@
+General
+Request URL：http://sxsx.jxeduyun.com:7779/portal-api/app/index/getStudentPlan
+Request Method：GET
+Protocol：HTTP/1.1
+Status Code：200
+Remote Address：118.212.143.129:7779
+Request Time：2024-12-06 16:45:03.228
+Duration：144ms
+Request Content-Type：application/json;charset=utf-8
+Response Content-Type：application/json;charset=UTF-8
+Request Package：0.73K
+Response Package：2.35K
+
+
+Request
+Path:/portal-api/app/index/getStudentPlan
+RequestHeaders
+Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2lkX2tleSI6IjhjMmM4MTI5NzZmNzQzZTc4Nzg2MWM0MTQxYThhOTFhIiwibG9naW5fdXNlcl9rZXkiOiIyYTM5NzIyYy03YzgwLTQzZjUtYjUwNC00ZjE5ZmJhZDM3NmYifQ.um_bsdtmt9hHH4Kwrmzo5MlgmeTV_iXyfYgs2X5edLBqVxi2uC0e_XesFGzmDg5zMa14yvAoDGUndr0N4q2W-g
+Accept: application/json, text/plain, */*
+Global-Year-Head: 2025
+Content-Type: application/json;charset=utf-8
+user-agent:Mozilla/5.0 (Linux; Android 14; 2407FRK8EC Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.71 Mobile Safari/537.36 uni-app Html5Plus/1.0 (Immersed/36.307693)
+Host : sxsx.jxeduyun.com:7779
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+Response
+StatusCode:200
+Response Headers
+Server: nginx/1.24.0
+Date: Fri, 06 Dec 2024 08:45:03 GMT
+Content-Type:_application/json;charset=UTF-8
+Connection : keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires : 0
+N-Timestamp: 2024-12-06T16:45:03+08:00
+Content-Length: 1931
+
+ResponseBody:
+{
+  "code": 200,
+  "msg": "请求成功",
+  "data": {
+    "autonomyPlan": {
+      "searchValue": null,
+      "createBy": "8c2c812976f743e787861c4141a8a91a",
+      "createTime": "2024-12-01 18:31:59",
+      "updateBy": "",
+      "updateTime": "2024-12-02 00:00:08",
+      "remark": null,
+      "params": {},
+      "id": "9fac3ba1b465ac7b674b5f092affabbd",
+      "planNo": "ZZJH68997饶昊宇自主实习申请20241201",
+      "userId": "8c2c812976f743e787861c4141a8a91a",
+      "nickName": "饶昊宇",
+      "enterpriseId": "c5bcb818-5707-4891-bad0-0f360f374859",
+      "enterpriseName": "江西贝特加贸易有限公司",
+      "enterpriseCode": "913604023092019941",
+      "postName": "办公自动化处理",
+      "beginTime": "2024-12-02",
+      "endTime": "2025-06-08",
+      "salary": "3500",
+      "enterpriseContacts": "王振勋",
+      "enterpriseContactsPhone": "13979223322",
+      "practicePlace": "九江市浔阳区长江大道1649号创业孵化基地江西贝特加贸易有限公司",
+      "threeFilePath": "",
+      "parentAgreeFile": "",
+      "otherFile": "",
+      "applyStatus": "1",
+      "approveUserId": "df9e887cb3fa4326bf4ed213c7c40093",
+      "approveUserName": "熊键",
+      "opinion": "",
+      "isFinish": "0",
+      "practiceStatus": "1",
+      "realEndTime": null,
+      "isJoinPractice": "1",
+      "companyId": "1790291951157874689",
+      "collegeId": "1795296065936809985",
+      "counsellorId": "9ae1e0c34a9d4682af100e30687baf58",
+      "counsellorName": "陆青",
+      "isBindExam": "0",
+      "score": null,
+      "finishScore": "0",
+      "isImportExcel": "0",
+      "province": "36",
+      "city": "3604",
+      "area": "360402",
+      "finishReason": "",
+      "hasDispute": "0",
+      "applyUserAvatar": null,
+      "approveUserAvatar": null,
+      "approveUserList": null,
+      "threeFilePathList": null,
+      "threeFileObjList": null,
+      "parentAgreeFileObjList": null,
+      "otherFileObjList": null,
+      "approveUser": null,
+      "applyUser": null,
+      "gradeName": null,
+      "schoolName": null,
+      "schoolType": null,
+      "collegeName": null,
+      "majorName": null,
+      "studentInfo": null,
+      "idList": null,
+      "planExams": null,
+      "bindExamIdList": null,
+      "yearName": null,
+      "reportList": null,
+      "studentCardNo": null,
+      "studentNo": null,
+      "classId": null,
+      "majorCode": null,
+      "practiceProject": null,
+      "workTime": null,
+      "payType": null,
+      "payTime": null,
+      "keywordInfo": null,
+      "apply": false
+    }
+  }
+}
