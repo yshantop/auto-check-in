@@ -2,12 +2,13 @@ name: Auto Sign
 
 on:
   schedule:
-    - cron: '0 0,10 * * *'  # UTC 时间，对应北京时间 8:00 和 18:00
+    - cron: '0 0,10 * * *'  # UTC 时间 0:00 和 10:00，对应北京时间 8:00 和 18:00
   workflow_dispatch:  # 支持手动触发
 
 jobs:
   sign:
     runs-on: ubuntu-latest
+    timeout-minutes: 5  # 添加超时限制
     steps:
       - uses: actions/checkout@v2
       
@@ -28,4 +29,4 @@ jobs:
         env:
           USERS_CONFIG: ${{ secrets.USERS_CONFIG }}
         run: |
-          python auto_sign.py
+          python auto_sign.py 

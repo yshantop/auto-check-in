@@ -117,16 +117,33 @@ class AutoSign:
         """上传图片获取fileId"""
         url = f"{self.base_url}/portal-api/common/uploadFileUrl"
         
-        # 准备文件数据
-        files = {
-            'file': (os.path.basename(image_path), 
-                    open(image_path, 'rb'), 
-                    'image/jpeg')
+        # 修改请求头，移除 Content-Type，让 requests 自动处理
+        headers = {
+            'Authorization': self.headers['Authorization'],
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 14; 2407FRK8EC Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.71 Mobile Safari/537.36 uni-app Html5Plus/1.0 (Immersed/36.307693)',
+            'Accept': 'application/json, text/javascript, */*; q=0.01',
+            'X-Requested-With': 'com.ecom.renrentong'
         }
         
         try:
             logger.info("开始上传图片...")
-            response = requests.post(url, headers=self.headers, files=files)
+            # 准备文件数据
+            with open(image_path, 'rb') as f:
+                # 使用原始文件名
+                filename = os.path.basename(image_path)
+                files = {
+                    'file': (
+                        filename,  # 使用原始文件名
+                        f,
+                        'image/jpeg'
+                    )
+                }
+                
+                response = requests.post(
+                    url, 
+                    headers=headers,
+                    files=files
+                )
             
             logger.info(f"图片上传响应状态码: {response.status_code}")
             logger.info(f"图片上传响应内容: {response.text}")
@@ -134,8 +151,12 @@ class AutoSign:
             if response.status_code == 200:
                 result = response.json()
                 if result.get("code") == 200:
-                    logger.info(f"图片上传成功，fileId: {result.get('id')}")
-                    return result.get("id")
+                    # 服务器返回的文件信息
+                    file_id = result.get("id")
+                    file_name = result.get("fileName")
+                    file_url = result.get("url")
+                    logger.info(f"图片上传成功，fileId: {file_id}, fileName: {file_name}, url: {file_url}")
+                    return file_id
                 else:
                     logger.error(f"图片上传失败: {result.get('msg')}")
                     return None
@@ -222,17 +243,9 @@ def do_sign():
             continue
 
 def main():
-    # 设置定时任务
-    schedule.every().day.at("08:00").do(do_sign)
-    schedule.every().day.at("18:00").do(do_sign)
-    
-    logger.info("定时任务已设置，等待执行...")
-    
-    # 运行定时任务循环
-    while True:
-        schedule.run_pending()
-        time.sleep(60)  # 每分钟检查一次是否有待执行的任务
+    """直接执行签到"""
+    logger.info("开始执行签到...")
+    do_sign()
 
 if __name__ == "__main__":
-    # do_sign() # 直接签到
-    main()  # 定时签到
+    main()
