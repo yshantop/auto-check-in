@@ -19,7 +19,7 @@ jobs:
           
       - name: Install dependencies
         run: |
-          pip install requests schedule
+          pip install requests
           
       - name: Create image file
         run: |

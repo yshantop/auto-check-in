@@ -3,15 +3,12 @@ import json
 from datetime import datetime
 import logging
 import os
-import schedule
-import time
 
 # 配置日志
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('auto_sign.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
